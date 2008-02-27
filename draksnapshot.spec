@@ -8,7 +8,7 @@ License: GPL
 Group:   Archiving/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:  rsnapshot
-BuildRequires: gettext, perl-MDK-Common-devel
+BuildRequires: gettext, perl-MDK-Common-devel intltool
 BuildArch: 	noarch
 
 
