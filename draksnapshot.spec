@@ -1,6 +1,6 @@
 Summary: Snapshot utility
 Name:    draksnapshot
-Version: 0.2
+Version: 0.3
 Release: %mkrel 1
 Source0: %{name}-%{version}.tar.lzma
 Patch0:  draksnapshot-build-fix.patch
