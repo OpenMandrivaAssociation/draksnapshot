@@ -8,6 +8,7 @@ License: GPL
 Group:   Archiving/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:  rsnapshot
+Requires:  drakxtools >= 10.6.25
 BuildRequires: gettext, perl-MDK-Common-devel intltool
 BuildArch: 	noarch
 
