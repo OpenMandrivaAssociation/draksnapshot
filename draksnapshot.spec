@@ -28,6 +28,10 @@ perl -pi -e 's!my \$ver = 1;!my \$ver = '"'%version-%release'"';!' draksnapshot-
 rm -rf %{buildroot}
 %makeinstall_std PREFIX=$RPM_BUILD_ROOT 
 
+# so that we remove cron entry on removal:
+mkdir %{buildroot}%_sysconfdir/cron.d
+touch %{buildroot}%_sysconfdir/cron.d/rsnapshot
+
 %{find_lang} %{name}
 
 %post
@@ -44,6 +48,7 @@ rm -rf %{buildroot}
 %files -f %name.lang
 %defattr(-,root,root)
 %defattr(-,root,root)
+%ghost %_sysconfdir/cron.d/rsnapshot
 %_bindir/*
 %_datadir/%{name}
 %_datadir/autostart/autostart-draksnapshot.desktop
