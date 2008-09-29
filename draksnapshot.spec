@@ -1,15 +1,14 @@
 Summary: Snapshot utility
 Name:    draksnapshot
-Version: 0.15
+Version: 0.16
 Release: %mkrel 1
 Source0: %{name}-%{version}.tar.lzma
-Patch0:	 draksnapshot-fix-po.diff
 URL:	    http://www.mandrivalinux.com
 License: GPL
 Group:   Archiving/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:  rsnapshot
-Requires:  drakxtools >= 10.6.25
+Requires:  drakxtools >= 10.59
 BuildRequires: gettext, perl-MDK-Common-devel intltool
 BuildArch: 	noarch
 
@@ -20,7 +19,6 @@ filesystems.  It uses hard links to save space on disk.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 %make
