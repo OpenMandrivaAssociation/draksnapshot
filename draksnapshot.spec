@@ -1,14 +1,18 @@
 Summary: Snapshot utility
 Name:    draksnapshot
 Version: 0.17
-Release: %mkrel 1
+Release: %mkrel 2
 Source0: %{name}-%{version}.tar.lzma
 URL:	    http://www.mandrivalinux.com
 License: GPL
 Group:   Archiving/Other
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:  rsnapshot
+%if %mdkversion >=  200900
 Requires:  drakxtools >= 10.59
+%else
+Requires:  drakxtools >= 10.29.11
+%endif
 BuildRequires: gettext, perl-MDK-Common-devel intltool
 BuildArch: 	noarch
 
