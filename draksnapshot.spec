@@ -1,6 +1,6 @@
 Summary: Snapshot utility
 Name:    draksnapshot
-Version: 0.18.1
+Version: 0.19
 Release: %mkrel 2
 Source0: %{name}-%{version}.tar.lzma
 URL:	    http://www.mandrivalinux.com
