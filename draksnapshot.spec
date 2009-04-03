@@ -1,9 +1,8 @@
 Summary: Snapshot utility
 Name:    draksnapshot
-Version: 0.19.2
+Version: 0.20
 Release: %mkrel 1
 Source0: %{name}-%{version}.tar.lzma
-Patch0:	fix-build-due-to-fi-translations.diff
 URL:	    http://www.mandrivalinux.com
 License: GPL
 Group:   Archiving/Other
@@ -24,7 +23,6 @@ filesystems.  It uses hard links to save space on disk.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 %make
