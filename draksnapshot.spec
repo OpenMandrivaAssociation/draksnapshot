@@ -1,7 +1,7 @@
 Summary: Snapshot utility
 Name:    draksnapshot
-Version: 0.20.3
-Release: %mkrel 2
+Version: 0.20.4
+Release: %mkrel 1
 Source0: %{name}-%{version}.tar.lzma
 URL:	    http://www.mandrivalinux.com
 License: GPL
@@ -55,13 +55,11 @@ rm -rf %{buildroot}
 %ghost %_sysconfdir/cron.d/rsnapshot
 %_bindir/*
 %_datadir/%{name}
-%_datadir/autostart/autostart-draksnapshot.desktop
-%_datadir/gnome/autostart/gnome-autostart-draksnapshot.desktop
+%_sysconfdir/xdg/autostart/autostart-draksnapshot.desktop
 %_iconsdir/*.png
 %_liconsdir/*.png
 %_miconsdir/*.png
 %_sbindir/*
-%_sysconfdir/X11/xinit.d/draksnapshot-applet.xinit
 %perl_vendorlib/MDV
 
 
