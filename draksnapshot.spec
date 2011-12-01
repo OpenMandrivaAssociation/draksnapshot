@@ -33,7 +33,7 @@ perl -pi -e 's!my \$ver = 1;!my \$ver = '"'%version-%release'"';!' draksnapshot-
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std PREFIX=$RPM_BUILD_ROOT 
+%makeinstall_std PREFIX=%{buildroot} 
 
 # so that we remove cron entry on removal:
 mkdir %{buildroot}%_sysconfdir/cron.d
