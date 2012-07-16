@@ -2,9 +2,10 @@ Summary:	Snapshot utility
 Name:		draksnapshot
 Version:	0.20.4
 %define	subrel 1
-Release:	%mkrel 2
+Release:	%mkrel 3
 Source0:	%{name}-%{version}.tar.lzma
 Patch0:		draksnapshot-0.20.4.hal.patch
+Patch1:		draksnapshot-applet-fix-perl.patch
 URL:		http://www.mandrivalinux.com
 License:	GPL
 Group:		Archiving/Other
