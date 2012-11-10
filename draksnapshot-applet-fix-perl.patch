@@ -1,0 +1,30 @@
+--- ./draksnapshot-applet.new_perl	2012-07-16 15:58:16.303062322 +0000
++++ ./draksnapshot-applet	2012-07-16 15:59:47.873063720 +0000
+@@ -129,14 +129,14 @@ if ($dbus && $do) {
+             # make icon actually visible so that notification gots proper positionning:
+             gtkflush();
+             my $bubble = 
+-              Gtk2::Notify->new_with_status_icon(N("Error. Service disabled."),
++              Gtk2::Notify->new(N("Error. Service disabled."),
+                                                  join("\n",
+                                                       formatAlaTeX(N("Error while initializing DBus:")),
+                                                       $dbus_error,
+                                                       '',
+                                                       N("Disabling the service."),
+                                                   ),
+-                                                 '/usr/share/icons/draksnapshot.png', $icon);
++                                                 '/usr/share/icons/draksnapshot.png');
+             $bubble->set_urgency('critical');
+             my $timeout_bubble = 5000;
+             $bubble->set_timeout($timeout_bubble);
+@@ -237,8 +237,8 @@ sub setState {
+     select(undef, undef, undef, 0.1);  #- hackish :-(
+ 
+     if ($state{$state_type}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state_type}{do_not_use_bubble}) {
+-        my $bubble = Gtk2::Notify->new_with_status_icon(N("Info"), formatAlaTeX(translate($state{$state_type}{tt}[0])) . "\n",
+-                                                        '/usr/share/icons/draksnapshot.png', $icon);
++        my $bubble = Gtk2::Notify->new(N("Info"), formatAlaTeX(translate($state{$state_type}{tt}[0])) . "\n",
++                                                        '/usr/share/icons/draksnapshot.png');
+         $bubble->set_timeout(5000);
+         eval { $bubble->show };
+     }

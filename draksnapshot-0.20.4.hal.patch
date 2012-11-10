@@ -1,0 +1,29 @@
+--- draksnapshot-0.20.4/draksnapshot-config.hal	2010-08-17 12:53:30.000000000 +0400
++++ draksnapshot-0.20.4/draksnapshot-config	2011-09-20 17:16:32.000000000 +0400
+@@ -28,7 +28,7 @@ use standalone;     #- warning, standalo
+ use common;
+ use interactive;
+ use MDV::Snapshot::Common;
+-use MDV::Snapshot::Hal;
++#use MDV::Snapshot::Hal;
+ 
+ # i18n: IMPORTANT: to get correct namespace (drakconf instead of libDrakX)
+ BEGIN { unshift @::textdomains, 'draksnapshot' }
+@@ -110,11 +110,12 @@ my $where;
+ 
+ # if not configured, just default where will be mounted the discs by HAL:
+ if (!$backup_directory || $::testing) {
+-    my $dbus = get_system_bus();
+-    if ($dbus) {
+-        my @discs = map { $_->GetProperty('volume.mount_point') } find_removable_volumes($dbus);
+-        $backup_directory = $discs[0];
+-    }
++#    my $dbus = get_system_bus();
++#    if ($dbus) {
++#        my @discs = map { $_->GetProperty('volume.mount_point') } find_removable_volumes($dbus);
++#        $backup_directory = $discs[0];
++#    }
++	$backup_directory = "/.snapshot";
+ }
+ 
+ my $dialog = ugtk2->new(N("Backup snapshots configuration"));
