@@ -1,7 +1,7 @@
 Summary: Snapshot utility
 Name:    draksnapshot
 Version: 0.20.4
-Release: %mkrel 3
+Release: 4
 Source0: %{name}-%{version}.tar.lzma
 URL:	    http://www.mandrivalinux.com
 License: GPL
@@ -37,14 +37,6 @@ mkdir %{buildroot}%_sysconfdir/cron.d
 touch %{buildroot}%_sysconfdir/cron.d/rsnapshot
 
 %{find_lang} %{name}
-
-%post
-%{update_desktop_database}
-%{update_mime_database}
-
-%postun
-%{clean_desktop_database}
-%{clean_mime_database}
 
 %clean
 rm -rf %{buildroot}
