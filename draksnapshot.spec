@@ -3,7 +3,7 @@ Name:		draksnapshot
 Version:	0.20.5
 Release:	1
 Source0:	%{name}-%{version}.tar.xz
-URL:		http://www.mandrivalinux.com
+URL:		https://abf.rosalinux.ru/moondrake/draksnapshot
 License:	GPLv2+
 Group:		Archiving/Other
 Requires:	rsnapshot
