@@ -1,8 +1,8 @@
 Summary:	Snapshot utility
 Name:		draksnapshot
-Version:	0.20.4
-Release:	4
-Source0:	%{name}-%{version}.tar.lzma
+Version:	0.20.5
+Release:	1
+Source0:	%{name}-%{version}.tar.xz
 URL:		http://www.mandrivalinux.com
 License:	GPLv2+
 Group:		Archiving/Other
@@ -24,7 +24,7 @@ filesystems.  It uses hard links to save space on disk.
 perl -pi -e 's!my \$ver = 1;!my \$ver = '"'%{version}-%{release}'"';!' draksnapshot-applet
 
 %install
-%makeinstall_std PREFIX=%{buildroot}
+%makeinstall_std
 
 # so that we remove cron entry on removal:
 mkdir %{buildroot}%{_sysconfdir}/cron.d
