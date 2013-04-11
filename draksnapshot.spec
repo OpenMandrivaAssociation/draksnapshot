@@ -2,14 +2,16 @@ Summary:	Snapshot utility
 Name:		draksnapshot
 Version:	0.20.5
 Release:	1
-Source0:	%{name}-%{version}.tar.xz
-URL:		https://abf.rosalinux.ru/moondrake/draksnapshot
 License:	GPLv2+
 Group:		Archiving/Other
+Url:		https://abf.rosalinux.ru/moondrake/draksnapshot
+Source0:	%{name}-%{version}.tar.xz
+BuildArch:		noarch
+
+BuildRequires:	gettext perl-MDK-Common-devel
+BuildRequires:	intltool
 Requires:	rsnapshot
-Requires:	drakxtools >= 10.59
-BuildRequires:	gettext perl-MDK-Common-devel intltool
-BuildArch:	noarch
+Requires:	drakxtools
 
 
 %description
@@ -21,7 +23,7 @@ filesystems.  It uses hard links to save space on disk.
 
 %build
 %make
-perl -pi -e 's!my \$ver = 1;!my \$ver = '"'%{version}-%{release}'"';!' draksnapshot-applet
+sed -i -e 's!my \$ver = 1;!my \$ver = '"'%{version}-%{release}'"';!' draksnapshot-applet
 
 %install
 %makeinstall_std
