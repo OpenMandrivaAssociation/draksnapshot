@@ -1,7 +1,7 @@
 Summary:	Snapshot utility
 Name:		draksnapshot
 Version:	0.20.5
-Release:	7
+Release:	8
 License:	GPLv2+
 Group:		Archiving/Other
 Url:		https://abf.rosalinux.ru/moondrake/draksnapshot
