@@ -1,18 +1,19 @@
 Summary:	Snapshot utility
 Name:		draksnapshot
-Version:	0.20.5
-Release:	2
+Version:	0.21.0
+Release:	0.1
 License:	GPLv2+
 Group:		Archiving/Other
-Url:		https://abf.rosalinux.ru/moondrake/draksnapshot
+Url:		https://abf.rosalinux.ru/omv_software/draksnapshot
 Source0:	%{name}-%{version}.tar.xz
-BuildArch:		noarch
+BuildArch:	noarch
 
 BuildRequires:	gettext perl-MDK-Common-devel
 BuildRequires:	intltool
 Requires:	rsnapshot
 Requires:	drakxtools
-
+Requires:	perl-Net-DBus >= 1.1.0
+Requires:	udisks2
 
 %description
 This is a backup program that uses rsync to take backup snapshots of
