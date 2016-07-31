@@ -1,6 +1,6 @@
 Summary:	Snapshot utility
 Name:		draksnapshot
-Version:	0.21.0
+Version:	0.22.0
 Release:	1
 License:	GPLv2+
 Group:		Archiving/Other
