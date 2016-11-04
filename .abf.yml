@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   draksnapshot-0.22.0.tar.xz: c0cbdf73022712fb10c8dee9c52c3130502bb8e6
+sources:
+  draksnapshot-0.22.1.tar.xz: e6591ed26743c981f52acd44428da690b075beeb
